@@ -1,4 +1,4 @@
-module gitlab.globoi.com/antifraude/validator
+module github.com/gustavolimam/validator
 
 go 1.18
 

@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/go-playground/validator/v10"
-	"gitlab.globoi.com/antifraude/validator/validations"
+	"github.com/gustavolimam/validator/validations"
 )
 
 func NewValidator() *validator.Validate {

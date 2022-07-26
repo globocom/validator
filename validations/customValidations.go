@@ -27,7 +27,6 @@ func CPFValidation(field validator.FieldLevel) bool {
 
 	match, _ := regexp.MatchString(`([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})`, trimCPF)
 	if match != true {
-		fmt.Println("2")
 		return false
 	}
 
@@ -44,10 +43,8 @@ func CPFValidation(field validator.FieldLevel) bool {
 
 	aux, _ = strconv.Atoi(string(numbers[9]))
 	if resto != aux {
-		fmt.Println("Deu ruim")
 		return false
 	}
 
-	fmt.Println("deu bom")
 	return true
 }
