@@ -1,8 +1,8 @@
 package validator
 
 import (
+	"github.com/globocom/validator/validations"
 	"github.com/go-playground/validator/v10"
-	"github.com/gustavolimam/validator/validations"
 )
 
 func New() *validator.Validate {

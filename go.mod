@@ -1,4 +1,4 @@
-module github.com/gustavolimam/validator
+module github.com/globocom/validator
 
 go 1.18
 
