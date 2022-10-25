@@ -5,7 +5,7 @@
 
 Validator é uma biblioteca interna desenvolvida para criar validações customizadas para as estruturas utilizadas nas aplicações em Go.
 
-Para seu completo entendimento consultar a documentação oficial do [Validator](ttps://github.com/go-playground/validator/blob/master/README.md).
+Para seu completo entendimento consultar a documentação oficial do [Validator](https://github.com/go-playground/validator/blob/master/README.md).
 
 # Modos de uso
 
