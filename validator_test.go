@@ -19,6 +19,14 @@ func TestCPFValidation(t *testing.T) {
 		CPF: "273.487.260-11",
 	}
 
+	userErrorCornerCase1 := &User{
+		CPF: "111.111.111-11",
+	}
+
+	userErrorCornerCase2 := &User{
+		CPF: "222.222.222-22",
+	}
+
 	type fields struct {
 		validator *validator.Validate
 	}
@@ -41,6 +49,18 @@ func TestCPFValidation(t *testing.T) {
 			name:    "CPF validation error",
 			fields:  fields{validator: New()},
 			args:    args{userError},
+			wantErr: true,
+		},
+		{
+			name:    "CPF corner-case validation error",
+			fields:  fields{validator: New()},
+			args:    args{userErrorCornerCase1},
+			wantErr: true,
+		},
+		{
+			name:    "CPF corner-case validation error",
+			fields:  fields{validator: New()},
+			args:    args{userErrorCornerCase2},
 			wantErr: true,
 		},
 	}
