@@ -1,6 +1,8 @@
 package validator
 
 import (
+	"log"
+
 	"github.com/globocom/validator/validations"
 	"github.com/go-playground/validator/v10"
 )
@@ -8,8 +10,17 @@ import (
 func New() *validator.Validate {
 	validate := validator.New()
 
-	// Register all custom validation we create
-	validate.RegisterValidation("cpf", validations.CPFValidation)
+	if err := validate.RegisterValidation("cpf", validations.CPFValidation); err != nil {
+		log.Fatal(err)
+	}
+
+	if err := validate.RegisterValidation("cnpj", validations.CNPJValidation); err != nil {
+		log.Fatal(err)
+	}
+
+	if err := validate.RegisterValidation("docNumber", validations.DocNumberValidation); err != nil {
+		log.Fatal(err)
+	}
 
 	return validate
 }
